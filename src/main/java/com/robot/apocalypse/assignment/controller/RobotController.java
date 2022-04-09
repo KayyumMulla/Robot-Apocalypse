@@ -20,7 +20,7 @@ public class RobotController {
     @Autowired
     private RobotService robotService;
 
-    @PostMapping("/registers")
+    @PostMapping("/register")
     public ResponseEntity<SurvivorDTO> registerSurvivor(@RequestBody SurvivorDTO survivorDTO) {
         log.info("Calling Register Survivor endPoint");
         ResponseEntity<SurvivorDTO> survivorResponseEntity = new ResponseEntity<>(robotService.registerSurvivor(survivorDTO), HttpStatus.OK);
@@ -60,8 +60,8 @@ public class RobotController {
         return ResponseEntity.accepted().build();
     }
 
-    @GetMapping("/report")
-    private ResponseEntity<Report> getReport() {
+    @GetMapping("/reports")
+    public ResponseEntity<Report> getReport() {
         log.info("Calling Get Report endPoint");
         ResponseEntity<Report> reportResponseEntity = new ResponseEntity<>(robotService.getReport(), HttpStatus.OK);
         log.info("Finished Get Report endPoint");

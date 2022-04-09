@@ -73,17 +73,17 @@ API endpoints documention:
 Example of a request to create a survivor:
 ```
 {
-    name: 'Mauricio',
-    age: 25,
-    gender: 'Male',
-    location: {
-      latitude: 2931.21,
-      longitude: 2132.31,
+    "name": "Kayyum",
+    "age": 27,
+    "gender": "Male",
+    "location": {
+      "latitude": 293.21,
+      "longitude": 2132.31
     },
-    resources: {
-      Water: 1,
-      Ammunition: 2,
-      Medication: 3,
-      Food: 5,
-    },
-  }
+    "resources": {
+      "water": 1,
+      "ammunition": 2,
+      "medication": 3,
+      "food": 5
+    }
+}
