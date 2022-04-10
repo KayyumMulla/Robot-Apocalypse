@@ -44,7 +44,7 @@ public class RobotController {
         return survivorResponseEntity;
     }
 
-    @PutMapping("/{id}")
+    @PutMapping("/{id}/location")
     public ResponseEntity<Object> updateSurvivorLocation(@PathVariable Long id, @RequestBody LocationDTO locationDTO) {
         log.info("Calling Update Survivor location endPoint");
         robotService.updateSurvivorLocation(id, locationDTO);

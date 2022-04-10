@@ -52,22 +52,22 @@ In order to accomplish this, the API must fulfill the following use cases:
 In order to accomplish this challenge, I decided to use Spring boot + Rest Api option. 
 
 # How to get started
-After cloning the repository, you should type  
+After cloning the repository, import the project in any IDE and run below class  
 
-> mvn clean install
+>  Run AssignmentApplication.java in any IDE (Eclipse, Intellij, STS)
 
-so all the dependencies of the project will be installed. 
+
   
-API endpoints documention:
+# API endpoints documention:
 
-| TYPE         | Endpoint | Result |
-|--------------|----------|----------| 
-| GET      | /api/survivors/ | Return all survivors |
-| GET      | /api/survivors/{id} | Return survivors of id |
-| POST       | /api/survivors/register | Creates a new survivor |
-| PUT | /api/survivors/{id} | Updates a survivor's location |
-| PUT | /api/survivors/{id}/reportInfection/{id2}  | The second survivor reports the first one as infected |
-| GET | /survivors/reports | Reports the percentage of infected, percentage of non infected, list of infected, list of non infected survivors and List of Robot |
+| TYPE         | Endpoint                                  | Result |
+|--------------|-------------------------------------------|----------| 
+| GET      | /api/survivors/                           | Return all survivors |
+| GET      | /api/survivors/{id}                       | Return survivors of id |
+| POST       | /api/survivors/register                   | Creates a new survivor |
+| PUT | /api/survivors/{id}/location              | Updates a survivor's location |
+| PUT | /api/survivors/{id}/reportInfection/{id2} | The second survivor reports the first one as infected |
+| GET | /survivors/reports                        | Reports the percentage of infected, percentage of non infected, list of infected, list of non infected survivors and List of Robot |
 
 
 Example of a request to create a survivor:
@@ -87,3 +87,7 @@ Example of a request to create a survivor:
       "food": 5
     }
 }
+```
+
+# Postman collection link for above Apis
+> https://www.getpostman.com/collections/30b4fac95b8cb3c5f0a7
